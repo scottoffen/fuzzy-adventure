@@ -1,0 +1,36 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+       {
+           "name": "Fuzzy Consumer",
+           "type": "coreclr",
+           "request": "launch",
+           "preLaunchTask": "build",
+           "program": "${workspaceFolder}/src/Fuzzy.Consumer/bin/Debug/net5.0/Fuzzy.Consumer.dll",
+           "args": [],
+           "cwd": "${workspaceFolder}/src/Fuzzy.Consumer",
+           "stopAtEntry": false,
+           "console":"externalTerminal"
+       },
+        {
+            "name": "Fuzzy Producer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/Fuzzy.Producer/bin/Debug/net5.0/Fuzzy.Producer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Fuzzy.Producer",
+            "console":"externalTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
